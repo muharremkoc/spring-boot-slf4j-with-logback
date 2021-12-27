@@ -1,0 +1,164 @@
+<configuration>
+
+    <property name="HOME_LOG" value="logs/app.log"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${HOME_LOG}</file>
+        <append>true</append>
+        <immediateFlush>true</immediateFlush>
+        <encoder>
+            <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.example.springbootslf4jwithlogback" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <logger name="ch.qos.logback" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.apache.kafka" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="javax.activation" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+
+    </logger>
+    <logger name="java.security" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="javax.crypto" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="javax.mail" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="javax.management.remote" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="javax.xml.bind" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="com.hazelcast" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="com.netflix" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="com.netflix.config.sources.URLConfigurationSource" level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="com.netflix.discovery" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="com.ryantenney" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="com.sun" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="com.zaxxer" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="io.undertow" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="io.undertow.websockets.jsr" level="OFF">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.apache" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.bson" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.hibernate.validator" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.hibernate" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.springframework" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.springframework.web" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.springframework.security" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.springframework.cache" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.thymeleaf" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="org.xnio" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="springfox" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <logger name="sun.rmi" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="liquibase" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="LiquibaseSchemaResolver" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="springfox.documentation.schema.property" level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="sun.net.www" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="sun.rmi.transport" level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+</configuration>
