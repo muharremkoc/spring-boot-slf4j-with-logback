@@ -6,7 +6,7 @@ Spring Boot Slf4j Added with Logback.xml file designed
 
 
 ```bash
-logback.xml file designed
+logback.xml file  for Console And LogFile designed
 ```
 
 ## Usage
